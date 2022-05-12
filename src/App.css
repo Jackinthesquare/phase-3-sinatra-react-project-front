@@ -1,38 +1,71 @@
 .App {
   text-align: center;
+  background-image: url('https://www.pokellector.com/images/bg-2016.jpg');
+  background-size: cover;
+  margin:0;
+  padding:0;
+  display:block;
+  position:absolute;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome{
+  font-size: 5em;
+  font-weight: bold;
+  color: red;
+  text-shadow: 5px 5px 10px goldenrod;
+}
+.new-card{
+  font-size: 4em;
+  color: firebrick;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.plus-sign{
+  font-size: 10em;
+  margin: 0;
+  color: navy;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+}
+.cards {
+  width: 22%;
+  height: auto;
+  padding: 0;
+  border: 1px solid goldenrod;
+  border-radius: 10px;
+  margin: 20px;
+  align-items: center;
+  color: royalblue;
+  font-weight: bold;
+  background-color: seagreen;
 }
 
-.App-link {
-  color: #61dafb;
+.cards:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: tranform 0.5s;
+  background: rgb(46, 2, 46);
+  box-shadow: 8px 8px 5px goldenrod;
+  color: rgba(255, 217, 0, 0.678);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-img{
+  width: 80%;
+}
+
+.card-name {
+  font-size: 1.5em;
+}
+
+.btn{
+  margin-bottom: 4%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
