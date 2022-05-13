@@ -23,7 +23,7 @@ const AddForm = ({ setIsVisibleAddForm, cards, setCards }) => {
 
     return (
         <div className="add-form-container">
-            <h2 className="buy-form-header">Add A Card</h2>
+            <h2 className="buy-form-header">Add a Card</h2>
             <form className='add-form'>
                 <input onChange={(e) => setCardName(e.target.value)} placeholder="Card Name" value={cardName} />
                 <input onChange={(e) => setImgSrc(e.target.value)} placeholder="Card Img Url" value={imgSrc} />

@@ -1,11 +1,12 @@
 .App {
   text-align: center;
   background-image: url('https://www.pokellector.com/images/bg-2016.jpg');
-  background-size: cover;
+  /* background-size: cover; */
   margin:0;
   padding:0;
-  display:block;
   position:absolute;
+  
+  
 
 }
 
@@ -14,6 +15,8 @@
   font-weight: bold;
   color: red;
   text-shadow: 5px 5px 10px goldenrod;
+  margin-bottom: 0;
+  
 }
 .new-card{
   font-size: 4em;
@@ -23,7 +26,7 @@
 .plus-sign{
   font-size: 10em;
   margin: 0;
-  color: navy;
+  color: firebrick;
 }
 
 .card-container {
@@ -48,11 +51,31 @@
 }
 
 .cards:hover {
-  cursor: pointer;
   transform: scale(1.02);
   transition: tranform 0.5s;
   background: rgb(46, 2, 46);
   box-shadow: 8px 8px 5px goldenrod;
+  color: rgba(255, 217, 0, 0.678);
+}
+
+.add-cards{
+  width: 22%;
+  height: auto;
+  padding: 0;
+  border: 1px solid goldenrod;
+  border-radius: 10px;
+  margin: 20px;
+  align-items: center;
+  color: royalblue;
+  font-weight: bold;
+  background-color: navy;
+}
+.add-cards:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: tranform 0.5s;
+  background: lightcoral;
+  box-shadow: 8px 8px 5px firebrick;
   color: rgba(255, 217, 0, 0.678);
 }
 
@@ -62,6 +85,35 @@
 
 .card-name {
   font-size: 1.5em;
+}
+.sell-btn {
+  margin-bottom: 4%;
+  margin-right: 10%;
+  margin-left: 10%;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  background-color: goldenrod;
+  font-size: 1em;
+  font-weight: bold;
+}
+.sell-btn:hover{
+  cursor: pointer;
+}
+
+.trade-btn{
+  margin-bottom: 4%;
+  margin-right: 10%;
+  margin-left: 10%;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  background-color: goldenrod;
+  font-size: 1em;
+  font-weight: bold;
+}
+.trade-btn:hover{
+  cursor: pointer;
 }
 
 .btn{
@@ -81,7 +133,7 @@
 }
 .add-form-container{
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 500px;
@@ -94,6 +146,29 @@
   row-gap: 50px;
 }
 .add-form{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.trade-form-container{
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  padding: 2em;
+  border: solid rgb(185, 149, 31);
+  border-radius: 10px;
+  background: whitesmoke;
+  z-index: 2;
+  row-gap: 50px;
+}
+.trade-form{
   display: flex;
   justify-items: center;
   align-items: center;

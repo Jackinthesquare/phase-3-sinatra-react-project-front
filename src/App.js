@@ -28,15 +28,12 @@ function App() {
   return (
     <div className="App">
       <h1 className='welcome'>My Charizard brings all the boys to the yard</h1>
-
       <div className='add-form'>
         {isVisibleAddForm ? <AddForm setIsVisibleAddForm={setIsVisibleAddForm} cards={cards} setCards={setCards}  /> : null}
       </div>
-
       <div className='trade-form'>
-        {isVisibleAddForm ? <TradeForm setIsVisibleTradeForm={setIsVisibleTradeForm} cards={cards} setCards={setCards}  /> : null}
+        {isVisibleTradeForm ? <TradeForm setIsVisibleTradeForm={setIsVisibleTradeForm} cards={cards} setCards={setCards}  /> : null}
       </div>
-
       <div className='card-container'>
         <NewCard setIsVisibleAddForm={setIsVisibleAddForm} />
         {
@@ -47,8 +44,6 @@ function App() {
           })
         }
       </div>
-
-
     </div>
   );
 }
