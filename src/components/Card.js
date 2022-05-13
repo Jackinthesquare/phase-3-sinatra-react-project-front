@@ -1,23 +1,23 @@
 import React from 'react';
 
 const Card = ({ card, cards, setCards }) => {
-    const {cardName, set_num, id} = card
-    const imgSrc = `https://den-cards.pokellector.com/119/${cardName.replaceAll(' ','-').replace("'","")}.BS.${set_num}.png`
-    
+    const { cardName, set_num, id, imgSrc } = card
+    // const imgSrc = `https://den-cards.pokellector.com/119/${cardName.replaceAll(' ','-').replace("'","")}.BS.${set_num}.png`
+    // transferred ^ to initial database on Sinatra!!!
     const handleDeleteCard = async () => {
-        let req = await fetch(`http://localhost:9292/cards/${id}`,{
-            method : 'DELETE'
+        let req = await fetch(`http://localhost:9292/cards/${id}`, {
+            method: 'DELETE'
         })
-        
-        const updatedCards = cards.filter((el) => el.id !== id)
-        setCards(updatedCards)
+    const updatedCards = cards.filter((el) => el.id !== id)
+    setCards(updatedCards)
+
     }
 
     const handleTradeCard = () => {
         console.log(card)
     }
 
-    return(
+    return (
         <div className='cards'>
             <p className='card-name'>{card.cardName}</p>
             <img src={imgSrc} className='card-img' />
