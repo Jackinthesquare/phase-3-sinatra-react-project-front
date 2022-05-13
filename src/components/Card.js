@@ -1,6 +1,7 @@
 import React from 'react';
+import TradeForm from './TradeForm';
 
-const Card = ({ card, cards, setCards }) => {
+const Card = ({ card, cards, setCards, setIsVisibleTradeForm }) => {
     const { cardName, set_num, id, imgSrc } = card
     // const imgSrc = `https://den-cards.pokellector.com/119/${cardName.replaceAll(' ','-').replace("'","")}.BS.${set_num}.png`
     // transferred ^ to initial database on Sinatra!!!
@@ -14,7 +15,7 @@ const Card = ({ card, cards, setCards }) => {
     }
 
     const handleTradeCard = () => {
-        console.log(card)
+        setIsVisibleTradeForm(true)
     }
 
     return (
@@ -24,6 +25,7 @@ const Card = ({ card, cards, setCards }) => {
             <p>set number : {card.set_num}/102</p>
             <button className='sell-btn' onClick={handleDeleteCard}>SELL</button>
             <button className='trade-btn' onClick={handleTradeCard}>TRADE </button>
+
         </div>
     )
 }

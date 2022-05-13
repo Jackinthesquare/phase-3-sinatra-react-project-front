@@ -68,9 +68,36 @@
   margin-bottom: 4%;
   margin-right: 10%;
   margin-left: 10%;
+  border-radius: 10px;
+  margin-top: 30%;
+  width: 100px;
+  height: 30px;
+  color: black;
+  background-color: seagreen;
+  font-size: 1em;
 }
-
-.add-form-container {
+.btn:hover{
+  cursor: pointer;
+}
+.add-form-container{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  padding: 2em;
+  border: solid rgb(185, 149, 31);
+  border-radius: 10px;
+  background: whitesmoke;
+  z-index: 2;
+  row-gap: 50px;
+}
+.add-form{
   display: flex;
-  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
 }

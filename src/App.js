@@ -4,6 +4,7 @@ import React from 'react';
 import Card from './components/Card';
 import NewCard from './components/NewCard';
 import AddForm from './components/AddForm';
+import TradeForm from './components/TradeForm';
 import { useState, useEffect } from 'react';
 
 
@@ -11,6 +12,8 @@ import { useState, useEffect } from 'react';
 function App() {
   const [cards, setCards] = useState([])
   const [isVisibleAddForm, setIsVisibleAddForm] = useState(false)
+  const [isVisibleTradeForm, setIsVisibleTradeForm] = useState(false)
+  
 
   useEffect(() => {
     (async () => {
@@ -25,16 +28,21 @@ function App() {
   return (
     <div className="App">
       <h1 className='welcome'>My Charizard brings all the boys to the yard</h1>
+
       <div className='add-form'>
         {isVisibleAddForm ? <AddForm setIsVisibleAddForm={setIsVisibleAddForm} cards={cards} setCards={setCards}  /> : null}
       </div>
-      <div className='card-container'>
 
+      <div className='trade-form'>
+        {isVisibleAddForm ? <TradeForm setIsVisibleTradeForm={setIsVisibleTradeForm} cards={cards} setCards={setCards}  /> : null}
+      </div>
+
+      <div className='card-container'>
         <NewCard setIsVisibleAddForm={setIsVisibleAddForm} />
         {
           cards.map((card) => {
             return (
-              <Card key={card.id} card={card} cards={cards} setCards={setCards} />
+              <Card key={card.id} card={card} cards={cards} setCards={setCards} setIsVisibleTradeForm={setIsVisibleTradeForm} />
             )
           })
         }

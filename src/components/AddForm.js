@@ -9,6 +9,7 @@ const AddForm = ({ setIsVisibleAddForm, cards, setCards }) => {
 
     const handleAddForm = async (e) => {
         e.preventDefault();
+        setNum(set_num +1)
         let req = await fetch('http://localhost:9292/cards',{
             method: 'POST',
             headers: {'CONTENT-TYPE':'application/json'},
@@ -22,12 +23,13 @@ const AddForm = ({ setIsVisibleAddForm, cards, setCards }) => {
 
     return (
         <div className="add-form-container">
+            <h2 className="buy-form-header">Add A Card</h2>
             <form className='add-form'>
                 <input onChange={(e) => setCardName(e.target.value)} placeholder="Card Name" value={cardName} />
                 <input onChange={(e) => setImgSrc(e.target.value)} placeholder="Card Img Url" value={imgSrc} />
             </form>
-            <button onClick={handleAddForm}>Add Card</button>
-            <button onClick={() => setIsVisibleAddForm(false)}>Cancel</button>
+            <button className="btn" onClick={handleAddForm}>Add Card</button>
+            <button className="btn" onClick={() => setIsVisibleAddForm(false)}>Cancel</button>
         </div>
 
     )
