@@ -13,6 +13,11 @@ function App() {
   const [cards, setCards] = useState([])
   const [isVisibleAddForm, setIsVisibleAddForm] = useState(false)
   const [isVisibleTradeForm, setIsVisibleTradeForm] = useState(false)
+
+  // States for Forms
+  const [cardName, setCardName] = useState('')
+  const [imgSrc, setImgSrc] = useState('')
+  const [set_num, setNum] = useState(103)
   
 
   useEffect(() => {
@@ -29,10 +34,10 @@ function App() {
     <div className="App">
       <h1 className='welcome'>My Charizard brings all the boys to the yard</h1>
       <div className='add-form'>
-        {isVisibleAddForm ? <AddForm setIsVisibleAddForm={setIsVisibleAddForm} cards={cards} setCards={setCards}  /> : null}
+        {isVisibleAddForm ? <AddForm setIsVisibleAddForm={setIsVisibleAddForm} cards={cards} setCards={setCards} cardName={cardName} setCardName={setCardName} imgSrc={imgSrc} setImgSrc={setImgSrc} set_num={set_num} setNum={setNum}  /> : null}
       </div>
       <div className='trade-form'>
-        {isVisibleTradeForm ? <TradeForm setIsVisibleTradeForm={setIsVisibleTradeForm} cards={cards} setCards={setCards}  /> : null}
+        {isVisibleTradeForm ? <TradeForm setIsVisibleTradeForm={setIsVisibleTradeForm} cards={cards} setCards={setCards} cardName={cardName} setCardName={setCardName} imgSrc={imgSrc} setImgSrc={setImgSrc} set_num={set_num} setNum={setNum} /> : null}
       </div>
       <div className='card-container'>
         <NewCard setIsVisibleAddForm={setIsVisibleAddForm} />

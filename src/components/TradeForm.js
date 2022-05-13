@@ -1,6 +1,6 @@
 import React from "react";
 
-const TradeForm = ({ setIsVisibleTradeForm, cards, setCardName}) => {
+const TradeForm = ({ setIsVisibleTradeForm, cards, setCards, cardName, setCardName, imgSrc, setImgSrc, set_num, setNum}) => {
     
     const handleTradeForm = () => {
         // const tradeNewCard = { cardName, imgSrc, set_num }

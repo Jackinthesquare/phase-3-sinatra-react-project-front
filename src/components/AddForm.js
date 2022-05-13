@@ -1,10 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-const AddForm = ({ setIsVisibleAddForm, cards, setCards }) => {
-    const [cardName, setCardName] = useState('')
-    const [imgSrc, setImgSrc] = useState('')
-    const [set_num, setNum] = useState(103)
+const AddForm = ({ setIsVisibleAddForm, cards, setCards, cardName, setCardName, imgSrc, setImgSrc, set_num, setNum }) => {
+
     const addNewCard = { cardName, imgSrc, set_num }
 
     const handleAddForm = async (e) => {
