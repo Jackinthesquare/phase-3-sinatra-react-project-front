@@ -1,16 +1,25 @@
 import React from "react";
 
-const TradeForm = ({ setIsVisibleTradeForm, card, setCardName}) => {
+const TradeForm = ({ setIsVisibleTradeForm, cards, setCardName}) => {
+    
     const handleTradeForm = () => {
         // const tradeNewCard = { cardName, imgSrc, set_num }
-        
+
         // let req = await fetch('http://localhost:9292/cards${cards.id}',{
         //     method: 'PATCH',
         //     headers: {'CONTENT-TYPE':'application/json'},
         //     body: JSON.stringify(tradeNewCard)
         // })
         // let res = await req.json(tradeNewCard)
-    
+
+        // const updateCard = cards.map((card) => {
+        //     if (card.id === res.id) {
+        //         return res;
+        //     } else {
+        //         return card
+        //     }
+        // })
+
     }
     return(
         <div className="trade-form-container">
