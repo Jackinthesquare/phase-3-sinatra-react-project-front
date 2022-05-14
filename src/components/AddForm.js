@@ -13,7 +13,7 @@ const AddForm = ({ setIsVisibleAddForm, cards, setCards, cardName, setCardName, 
             headers: {'CONTENT-TYPE':'application/json'},
             body: JSON.stringify(addNewCard)
         })
-        let res = await req.json(addNewCard)
+        let res = await req.json()
     
         setCards((prevState) => { return [res, ...prevState]})
         }

@@ -18,6 +18,8 @@ function App() {
   const [cardName, setCardName] = useState('')
   const [imgSrc, setImgSrc] = useState('')
   const [set_num, setNum] = useState(103)
+
+  const [cardId, setCardId] = useState(0)
   
 
   useEffect(() => {
@@ -37,14 +39,14 @@ function App() {
         {isVisibleAddForm ? <AddForm setIsVisibleAddForm={setIsVisibleAddForm} cards={cards} setCards={setCards} cardName={cardName} setCardName={setCardName} imgSrc={imgSrc} setImgSrc={setImgSrc} set_num={set_num} setNum={setNum}  /> : null}
       </div>
       <div className='trade-form'>
-        {isVisibleTradeForm ? <TradeForm setIsVisibleTradeForm={setIsVisibleTradeForm} cards={cards} setCards={setCards} cardName={cardName} setCardName={setCardName} imgSrc={imgSrc} setImgSrc={setImgSrc} set_num={set_num} setNum={setNum} /> : null}
+        {isVisibleTradeForm ? <TradeForm setIsVisibleTradeForm={setIsVisibleTradeForm} cards={cards} setCards={setCards} cardName={cardName} setCardName={setCardName} imgSrc={imgSrc} setImgSrc={setImgSrc} set_num={set_num} setNum={setNum} cardId={cardId} /> : null}
       </div>
       <div className='card-container'>
         <NewCard setIsVisibleAddForm={setIsVisibleAddForm} />
         {
           cards.map((card) => {
             return (
-              <Card key={card.id} card={card} cards={cards} setCards={setCards} setIsVisibleTradeForm={setIsVisibleTradeForm} />
+              <Card key={card.id} card={card} cards={cards} setCards={setCards} setIsVisibleTradeForm={setIsVisibleTradeForm} setCardId={setCardId} />
             )
           })
         }
